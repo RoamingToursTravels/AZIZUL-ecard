@@ -127,13 +127,20 @@ body.dark-mode .btn-dark-toggle:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px; /* Reduced space between logos */
-    margin-bottom: 15px; /* Reduced margin */
+    gap: 20px; /* Space between logos */
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .ecard-logo {
-    width: 100px; /* Adjust size as needed for individual logos */
-    height: auto;
+    width: 65px; /* Fixed width for equal sizing */
+    height: 50px; /* Fixed height for equal sizing */
+    object-fit: contain; /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+}
+
+.ecard-logo:hover {
+    transform: scale(1.05);
 }
 
 .ecard-photo-box {
@@ -675,9 +682,14 @@ body {
         padding: 1.5rem;
     }
     
-    .ecard-logo {
-        max-width: 120px;
+    .ecard-logo-container {
+        gap: 15px;
     }
+    
+    .ecard-logo {
+         width: 55px;
+         height: 42px;
+     }
     
     .ecard-photo-img {
         width: 130px;
@@ -704,9 +716,14 @@ body {
         border-radius: 25px;
     }
     
-    .ecard-logo {
-        max-width: 110px;
+    .ecard-logo-container {
+        gap: 12px;
     }
+    
+    .ecard-logo {
+         width: 50px;
+         height: 38px;
+     }
     
     .ecard-photo-img {
         width: 120px;
@@ -758,9 +775,15 @@ body {
         min-height: auto;
     }
     
-    .ecard-logo {
-        max-width: 100px;
+    .ecard-logo-container {
+        gap: 10px;
+        margin-bottom: 15px;
     }
+    
+    .ecard-logo {
+         width: 45px;
+         height: 34px;
+     }
     
     .ecard-profile-section {
          flex-direction: row;
@@ -844,7 +867,8 @@ body {
     }
     
     .ecard-logo {
-        max-width: 80px;
+        width: 40px;
+        height: 30px;
     }
     
     .ecard-photo-img {
@@ -900,7 +924,8 @@ body {
     }
     
     .ecard-logo {
-        max-width: 90px;
+        width: 42px;
+        height: 32px;
     }
     
     .ecard-profile-section {
@@ -964,7 +989,8 @@ body {
     }
     
     .ecard-logo {
-        max-width: 80px;
+        width: 50px;
+        height: 38px;
         margin-bottom: 0.5rem;
     }
     

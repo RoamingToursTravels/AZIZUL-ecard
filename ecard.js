@@ -19,15 +19,11 @@ const ANIMATION = {
  * Generates and downloads a vCard (.vcf) file for the contact.
  */
 function saveContact() {
-    const name = "S M Moniruzzaman";
-    const mobile = "+8801329739728";
-    const usaNumber = "+1 (505) 234-5706";
-    const email1 = "ceo@blackrock-bd.com";
-    const email2 = "ceo@derbana.com";
+    const name = "S.M. AZIZUL HAKIM";
+    const mobile = "+8801860957209";
+    const email1 = "aziz@derbana.com";
+    const email2 = "aziz@blacrock-bd.com";
     const blackrockWebsite = "https://blackrock-bd.com/";
-    const derbanaWebsite = "https://derbana.com/";
-    const bdOffice = "Niloy, House-25 (2nd Floor), Road-02, Sector-03, opposite of Shopno, Rajlokkhi, Uttara, Dhaka, Bangladesh";
-    const factoryAddress = "House: 2084, Suite: 2a, Level: 02, Ward: 16, Malancha,shakta, Holding: 2084, Road: 06, Zianagar, Madrasa Road, Malancha, Dhaka-1312, Bangladesh.";
     const usaOffice = "8206 Louisiana Blvd Ne, Ste A #6795, Albuquerque, New Mexico 87113 USA.";
 
     const vCard = [
@@ -35,14 +31,11 @@ function saveContact() {
         "VERSION:3.0",
         `FN:${name}`,
         `N:${name};;;;`,
+        `TITLE:Managing Director`,
         `TEL;TYPE=CELL:${mobile}`,
-        `TEL;TYPE=WORK:${usaNumber}`,
         `EMAIL;TYPE=WORK:${email1}`,
         `EMAIL;TYPE=WORK:${email2}`,
         `URL;TYPE=WORK:${blackrockWebsite}`,
-        `URL;TYPE=WORK:${derbanaWebsite}`,
-        `ADR;TYPE=WORK:;;${bdOffice};;;;Bangladesh`,
-        `ADR;TYPE=WORK:;;${factoryAddress};;;;Bangladesh`,
         `ADR;TYPE=WORK:;;${usaOffice};;;;USA`,
         "END:VCARD"
     ].join('\n');
